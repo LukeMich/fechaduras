@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  port_id: 
+  usuario_id: 
+  acao: MyString
+
+two:
+  port_id: 
+  usuario_id: 
+  acao: MyString
