@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :ports
   devise_for :usuarios
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
