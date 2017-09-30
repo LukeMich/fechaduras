@@ -28,7 +28,7 @@ class PortsController < ApplicationController
 
     respond_to do |format|
       if @port.save
-        format.html { redirect_to @port, notice: 'Port was successfully created.' }
+        format.html { redirect_to ports_path, notice: 'Port was successfully created.' }
         format.json { render :show, status: :created, location: @port }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PortsController < ApplicationController
   def update
     respond_to do |format|
       if @port.update(port_params)
-        format.html { redirect_to @port, notice: 'Port was successfully updated.' }
+        format.html { redirect_to ports_path, notice: 'Port was successfully updated.' }
         format.json { render :show, status: :ok, location: @port }
       else
         format.html { render :edit }

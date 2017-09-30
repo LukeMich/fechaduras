@@ -21,6 +21,8 @@ gem 'mysql2', '~> 0.3.18'
 gem 'prawn'
 gem 'prawn-table', '~> 0.2.0'
 
+gem 'therubyracer'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

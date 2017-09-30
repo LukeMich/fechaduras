@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body> 
+	<div class="body">
+			<header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 0, "stickySetTop": "0", "stickyChangeLogo": false}'>
+				<div class="header-body">
+					<div class="header-container container">
+						<div class="header-row">
+							
+							<div class="header-column header-nav" style="width: 100%; text-align: center;">
+								<div class="header-row">
+									<div class="header-nav">
+										<ul class="nav nav-pills" id="mainNav">
+											<div style="margin: 0 auto; display: table;">
+												<% if usuario_signed_in? %>
+												
+													<% if current_usuario.try(:admin?) %>
+														<li class="login">
+															<a href="/ports" >
+																FECHADURAS
+															</a>
+														</li>
+														
+														<li class="login">
+															<a href="/usuarios" >
+																USUÁRIOS
+															</a>
+														</li>
+														
+														<li class="login">
+															<a href="/usuarios/liberarPortas" >
+																LIBERAR PORTAS
+															</a>
+														</li>
+	          										<% else %>
+	          										
+	          										<% end %>
+												
+												<li class="login">
+													<a href="/usuarios/sign_out" data-method="delete" rel="nofollow">
+														SAIR
+													</a>
+												</li>
+												<% else %>
+												 	<li class="login">
+													<a href="/usuarios/sign_in">
+														ENTRAR
+													</a>
+												</li>   
+												<% end %>
+											</div>
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+	</div>
+
+</body>
+</html>

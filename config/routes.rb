@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
+  
+  root 'visitante#index'
   resources :ports
+  resources :visitante
+  resources :usuarios do
+    collection do
+      get :liberarPortas
+     
+    end
+  end
   devise_for :usuarios
   
   
@@ -7,7 +16,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
