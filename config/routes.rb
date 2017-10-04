@@ -3,14 +3,9 @@ Rails.application.routes.draw do
   root 'visitante#index'
   resources :ports
   resources :visitante
-  resources :usuarios do
-    collection do
-      get :liberarPortas
-     
-    end
-  end
+ 
   devise_for :usuarios
-  
+  get 'liberarPortas' => 'usuarios#liberarPortas', :as => :liberarPortas
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
